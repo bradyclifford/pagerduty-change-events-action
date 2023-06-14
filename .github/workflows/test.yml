@@ -1,0 +1,31 @@
+name: 🧪 Tests
+on:
+  workflow_dispatch:
+  
+env:
+  # Test token
+  PAGERDUTY_CHANGE_INTEGRATION_KEY: y_NbAkKc66ryYTWUXYEu
+  
+jobs:
+  integrations:
+    runs-on: ubuntu-latest
+
+    steps:            
+      - name: Create a change event
+        uses: bradyclifford/pagerduty-change-events-action@patch-1
+        with:
+          integration-key: ${{ env.PAGERDUTY_CHANGE_INTEGRATION_KEY }}
+          custom-event: Deployment
+          custom-details: |
+            {
+              "build_state": "passed",
+              "build_number": "220",
+              "run_time": "1236s"
+            }
+          custom-links: |
+            [
+              {
+                "href": "https://dashboard.com/1234",
+                "text": "View Dashboard"
+              }
+            ]
