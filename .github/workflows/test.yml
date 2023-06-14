@@ -8,20 +8,7 @@ jobs:
 
     steps:            
       - name: Create a change event
-        uses: bradyclifford/pagerduty-change-events-action@patch-1
+        uses: bradyclifford/pagerduty-change-events-action@update-dependencies
         with:
           integration-key: 737ea619db564d41bd9824063e1f6b08
-          custom-event: Test custom event
-          custom-details: |
-            {
-              "build_state": "passed",
-              "build_number": "220",
-              "run_time": "1236s"
-            }
-          custom-links: |
-            [
-              {
-                "href": "https://dashboard.com/1234",
-                "text": "View Dashboard"
-              }
-            ]
+          custom-event: Test custom event with dependency updates
