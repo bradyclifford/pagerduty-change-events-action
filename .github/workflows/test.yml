@@ -11,7 +11,7 @@ jobs:
         uses: bradyclifford/pagerduty-change-events-action@patch-1
         with:
           integration-key: 737ea619db564d41bd9824063e1f6b08
-          custom-event: Deployment
+          custom-event: Test custom event
           custom-details: |
             {
               "build_state": "passed",
