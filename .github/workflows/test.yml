@@ -2,8 +2,6 @@ name: 🧪 Tests
 on:
   workflow_dispatch:
   
-env:
-  
 jobs:
   integrations:
     runs-on: ubuntu-latest
